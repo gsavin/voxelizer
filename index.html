@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Faironnerie ABC | Cabanes 2k17</title>
+		<style>
+		#controls {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: rgba(22, 22, 22, 0.75);
+      color: #efefef;
+      display: flex;
+      flex-direction: column;
+		}
+
+    .input-group {
+      flex: 1 1 auto;
+      border-left: solid #4c5c96 5px;
+      padding: 10px;
+    }
+		</style>
+	</head>
+	<body>
+		<div id="controls">
+      <div class="input-group">
+				<input type="range" min="1" max="30" step="1" value="10" id="granularity"/>
+				<span id="granularity-value">10 subdivisions</span>
+			</div>
+			<div class="input-group">
+				<input type="checkbox" name="display-original"/>
+				<label for="display-original">Display original model ?</label>
+			</div>
+			<div class="input-group">
+				<input type="file" id="loader"/>
+			</div>
+		</div>
+		<div id="container"></div>
+
+		<script src="lib/threejs/three.min.js"></script>
+		<script src="lib/threejs/OrbitControls.js"></script>
+		<script src="lib/threejs/STLLoader.js"></script>
+		<script src="lib/tweenjs.min.js"></script>
+		<script src="bundle.js"></script>
+	</body>
+</html>
